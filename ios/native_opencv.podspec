@@ -16,28 +16,28 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '10.0'
-
-  # Flutter.framework does not contain a i386 slice.
-#   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
-#
+  s.dependency 'OpenCV-Dynamic-Framework', '4.5.5'
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64',
-    'HEADER_SEARCH_PATHS' => '$(inherited)'  # Thêm dòng này
+    'HEADER_SEARCH_PATHS' => '$(inherited) $(Pods/OpenCV-Dynamic-Framework/opencv2.framework/Headers)'  # Thêm dòng này
   }
+  # Flutter.framework does not contain a i386 slice.
+#   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
+#
   s.swift_version = '5.0'
 
   # telling CocoaPods not to remove framework
-  s.preserve_paths = 'opencv2.framework' 
+  # s.preserve_paths = 'opencv2.framework' 
 
   # telling linker to include opencv2 framework
 #   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework opencv2' }
-  s.xcconfig = {
-    'OTHER_LDFLAGS' => '-framework opencv2 -lc++'  # Thêm -lc++
-  }
+  # s.xcconfig = {
+  #   'OTHER_LDFLAGS' => '-framework opencv2 -lc++'  # Thêm -lc++
+  # }
 
   # including OpenCV framework
-  s.vendored_frameworks = 'opencv2.framework' 
+  # s.vendored_frameworks = 'opencv2.framework' 
 
   # including native framework
   s.frameworks = 'AVFoundation'
