@@ -1,9 +1,7 @@
 PODS:
   - Flutter (1.0.0)
-  - native_opencv (0.0.1):
+  - native_opencv (4.5.5):
     - Flutter
-    - OpenCV-Dynamic-Framework (= 4.5.5)
-  - OpenCV-Dynamic-Framework (4.5.5)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -12,10 +10,6 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - native_opencv (from `.symlinks/plugins/native_opencv/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
-
-SPEC REPOS:
-  trunk:
-    - OpenCV-Dynamic-Framework
 
 EXTERNAL SOURCES:
   Flutter:
@@ -27,10 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  native_opencv: 9ca9c6c80f3d3636ac739c97d38721162afd0dd8
-  OpenCV-Dynamic-Framework: 057e8504d1847cc8b24a550f25987bfec885177f
+  native_opencv: 8758a2f62d003236c2ee656c2be269e4482d1ce0
   path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: 22cbe5e1ec1cce6dd8d87795b4bda348761bd052
 
 COCOAPODS: 1.16.2
