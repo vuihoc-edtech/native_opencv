@@ -30,6 +30,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -337,7 +339,7 @@ class _MyHomePageState extends State<MyHomePage> {
       port.close();
 
       if (message == null) return;
-
+      log('$message', name: '_MyHomePageState._processImage');
       final result = jsonDecode(message);
 
       handleResult(result, tempPath);
